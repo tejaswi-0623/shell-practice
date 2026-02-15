@@ -29,3 +29,9 @@ else
 
 fi
 
+#checking user id has root access or not
+#if not have root access then exit the script
+#if root user install nginx
+#if you check with $? command if exit code is o then nginx installtion is success
+#now install mysql
+#if you check with $? command if exit code is o then mysql installtion is success
