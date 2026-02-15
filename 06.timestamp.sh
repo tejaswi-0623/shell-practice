@@ -11,5 +11,5 @@ sleep 10
 end_time=$(date +%s)
 echo "program executed time is: $end_time"
 
-total_time=(($end_time-$start_time))
+total_time=$(($end_time-$start_time))
 echo "the duration of program is: $total_time"
