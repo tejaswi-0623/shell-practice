@@ -26,3 +26,9 @@ echo "first fruit is: ${fruits[0]}"
 echo "second fruit is: ${fruits[1]}"
 echo "third fruit is: ${fruits[2]}"
 echo "fourth fruit is: ${fruits[3]}"
+
+#Fruits we defined are: apple cherry banana pear
+#first fruit is: apple
+#second fruit is: cherry
+#third fruit is: banana
+#fourth fruit is: pear
