@@ -2,4 +2,4 @@
 
 timestamp=$(date)
 
-echo "time taken is $timestamp"
+echo "script executed at: $timestamp"
