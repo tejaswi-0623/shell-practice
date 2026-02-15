@@ -1,5 +1,5 @@
 #!bin/bash
 
-timestamp=$(date +%s)
+timestamp=$(date)
 
 echo "time taken is $timestamp"
