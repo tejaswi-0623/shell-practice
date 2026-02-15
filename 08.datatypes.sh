@@ -20,7 +20,7 @@ echo "the result is: $sum3"
 #the result is: 100 here it takes string value as zero and performed operation
 
 #Array
-fruits=("apple","cherry","banana","pear")
+fruits=("apple" "cherry" "banana" "pear")
 echo "Fruits we defined are: ${fruits[@]}"
 echo "first fruit is: ${fruits[0]}"
 echo "second fruit is: ${fruits[1]}"
