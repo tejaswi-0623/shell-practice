@@ -1,10 +1,10 @@
 #!/bin/bash
 
 num1=100
-num2=200.5
+#num2=200.5
 
-sum=$(($num1+num2))
-echo "the result is: $sum"
+#sum=$(($num1+num2))
+#echo "the result is: $sum"
 
 #syntax error: invalid arithmetic operator (error token is ".5") shell doesn't support float
 
