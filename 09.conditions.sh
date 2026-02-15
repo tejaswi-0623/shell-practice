@@ -1,6 +1,6 @@
 #!/bin/bash
 
-number=$1
+number=$1 #passing the value from command line
 
 if [ $number -gt 30 ]; then
 echo "given number is greater than 30"
@@ -12,3 +12,6 @@ else
 echo "given number is less than 30"
 
 fi
+
+#sh 09.conditions.sh 20
+#given number is less than 30
