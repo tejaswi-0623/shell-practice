@@ -12,3 +12,8 @@ sum2=$(($num1+$num3))
 echo "the result is: $sum2"
 
 
+num4=honey
+sum3=$(($num1+$num4))
+echo "the result is: $sum3"
+
+
