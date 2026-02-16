@@ -20,13 +20,13 @@ validate(){
     fi
 }
 
-dnf install nginx -y &>> $LOGS_FILE
+dnf install nginx -y &>> $Logs_file
 validate $? "nginx installtion"
 
-dnf install mysql -y &>> $LOGS_FILE
+dnf install mysql -y &>> $Logs_file
 validate $? "mysql installation"
 
-dnf install redis -y &>> $LOGS_FILE
+dnf install redis -y &>> $Logs_file
 validate $? "redis installation"
 
 #logs_folder is vairable and "var/log/shell-practice" is folder path
