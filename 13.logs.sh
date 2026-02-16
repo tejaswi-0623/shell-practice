@@ -4,7 +4,7 @@ userid=$(id -u)  #userid is vairable
 Logs_folder="var/log/shell-practice"  
 Logs_file="var/log/shell-practice/$0.log"  
 
-if [$userid -ne 0 ]; then
+if [ $userid -ne 0 ]; then
   echo "please run this script with root user access" | tee -a $Logs_file
   exit 1
 fi
@@ -12,7 +12,7 @@ fi
 mkdir -p $Logs_folder #$Logs_folder is accessing vairable
 
 validate(){
-    if [$1 -ne 0 ]; then
+    if [ $1 -ne 0 ]; then
       echo " $2 is..........failed" | tee -a $Logs_file
       exit 1
     else
@@ -33,4 +33,5 @@ validate $? "redis installation"
 #logs_file is vairable and "var/log/shell-practice/$0.log" is file path and $0 is script name
 #-p means if there okay otherwise create folder with name logs_folder
 #tee command will print in the screen and save it in the logs_file
+#-a means append -->not overwrite the log_file just append to it
 #&>> $LOGS_FILE appends both at output and errors to a log file.
