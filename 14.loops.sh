@@ -34,3 +34,6 @@ done
 #&>> means append at output and show errors to logs_file
 #if you run sh 14.loops.sh we get output ad please run the script with root user access
 #if you run sudo 14.loops.sh mysql nginx will install them at run time instead of giving them in code
+#nginx installation is......success we got output like this
+#mysql installation is......success
+#sudo less var/log/shell-practice/14.loops.sh.log by using this we can check the detailed log
