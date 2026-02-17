@@ -17,6 +17,7 @@ validate(){
      exit 1
     else
      echo "$2 installation is ......success" | tee -a $logs_file
+    fi
 }
 
 for package in $@ #sudo give package names at run time
