@@ -18,10 +18,10 @@ mkdir -p $logs_folder
 
 validate(){
     if [ $1 -ne 0 ]; then
-     echo -e "$red $2 installation is .......failed $normal" |tee -a $logs_file
+     echo -e "$2 installation is .......$red failed $normal" |tee -a $logs_file
      exit 1
     else
-      echo -e "$green $2 installation is .....success $normal" |tee -a $logs_file
+      echo -e "$2 installation is .....$green success $normal" |tee -a $logs_file
     fi
 }
 
@@ -29,10 +29,10 @@ for package in $@  #give package names at run time with sudo access
   do
     dnf list installed $package &>> $logs_file #list of installed packages
     if [ $? -ne 0 ]; then
-       echo -e " $blue $package not installed, installing now $normal"
+       echo -e "$package not installed, $blue installing now $normal"
        dnf install $package -y &>> $logs_file
        validate $? "$package"
     else
-      echo -e "$yellow $package already installed, skipping now $normal"
+      echo -e "$package already installed, $yellow skipping now $normal"
     fi
 done
