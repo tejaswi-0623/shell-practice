@@ -23,12 +23,12 @@ validate(){
 for package in $@ #sudo give package names at run time
 do 
  dnf list installed $package &>> $logs_file
-if [ $? -ne 0 ]; then
- echo "$package not installed, installing now" 
- dnf install $package -y &>> $logs_file
- validate $? "$package"
-else
+  if [ $? -ne 0 ]; then
+    echo "$package not installed, installing now" 
+    dnf install $package -y &>> $logs_file
+    validate $? "$package"
+  else
   echo "$pacakge already installed, so skipping now"
-fi
+  fi
 
 done
