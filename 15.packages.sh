@@ -28,7 +28,23 @@ do
     dnf install $package -y &>> $logs_file
     validate $? "$package"
   else
-  echo "$pacakge already installed, so skipping now"
+  echo "$package is already installed, so skipping now"
   fi
 
 done
+
+#userid not equal to 0 so asking to get root user access and exit the script
+#we need to check status of initial command everytime shell won't do so we have to check
+#for that we are writing validate function to check status of previous command if not equal to zero will failed and exit the script if equals to zero script will eun further
+#if we have multiple packages to install we can write in for loop and can give package names suring time
+#in this we are checking for packages installed list if there script will say already installed otherwise it will install new package
+#we are calling validate function $1=$? and $2=$package
+#if we give like this  sh 15.packages.sh below one is output
+#tee: var/log/shell-practice/15.packages.sh.log: Permission denied
+#please run the script with root user access
+#if we give like this  sudo sh 15.packages.sh nginx mysql nodejs below one is output
+#nginx is already installed, so skipping now
+#mysql is already installed, so skipping now
+#nodejs not installed, installing now
+#nodejs installation is ......success
+
