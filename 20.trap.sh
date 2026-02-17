@@ -29,3 +29,11 @@ do
         echo -e "$package already installed ... $Y SKIPPING $N"
     fi
 done
+
+
+#if we run the script like sudo sh 20.trap.sh nginx fdfijdf we get output like this
+#nginx already installed ...  SKIPPING
+#There is an error in 24, Command: dnf list installed $package &>> $LOGS_FILE
+#first one is valid and second one is incorrect package soo showed error
+#using set and trap function we can't understand the exact flow of the script like why it happened
+#both validate and set,trap function do similar kind of work 
