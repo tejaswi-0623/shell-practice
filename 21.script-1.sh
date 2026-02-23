@@ -8,7 +8,7 @@ echo "code of $country to phone call is $code"
 echo "PID of script-1 is $$"
 
 #sh 22.script-2.sh  #by calling another script
-source ./22-script-2.sh #by using source command to call another script
+source ./22.script-2.sh #by using source command to call another script
 
 
 #sh 22.script-2.sh for this script calling
