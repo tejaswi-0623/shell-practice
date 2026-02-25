@@ -13,4 +13,4 @@ done
 while IFS= read -r line; do
   # Process each line here
   echo "$line"
-done < 22-script-2.sh # input which file to read
+done < 22.script-2.sh # input which file to read
