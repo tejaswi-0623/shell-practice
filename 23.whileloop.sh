@@ -10,7 +10,6 @@ do
 done
 
 
-while IFS= read -r line; do
-  # Process each line here
-  echo "$line"
+while IFS= read -r line; do   #will read the file line by line ifs=internal field  and line is vairable here
+  echo "$line" #print line
 done < 22.script-2.sh # input which file to read
