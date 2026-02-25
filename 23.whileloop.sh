@@ -2,7 +2,7 @@
 
 count=1
 
-while [ $count -le 1 ]
+while [ $count -le 5 ]
 do
   echo "count now is $count"
   sleep 1
