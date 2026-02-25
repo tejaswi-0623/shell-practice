@@ -6,5 +6,5 @@ while [ $count -le 1 ]
 do
   echo "count now is $count"
   sleep 1
-  (count++)
+  ((count++))
 done
