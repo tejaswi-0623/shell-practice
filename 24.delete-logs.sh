@@ -8,7 +8,7 @@ if [ ! -d $logs_folder ]; then  #to check directory or folder that exists to del
   exit 1
 fi
 
-files_to_delete=$(find $logs_folder -name "*.log" -mtime + 14) 
+files_to_delete=$(find find $logs_folder -name "*.log" -mtime +14) 
 #name==file names *.log==log files to delete mtime==modified time +14=older than 14 days
 
 while IFS= read -r filepath; do #filepath is vairable here
