@@ -1,6 +1,6 @@
 #!/bin/bash
 
-logs_folder="/home/ec2-user/app-logs"
+logs_folder="/home/ec2-user/app-logs" #in this path .log files are stored.
 logs_file="$logs_folder/$0.log"
 
 if [ ! -d $logs_folder ]; then
