@@ -12,7 +12,7 @@ files_to_delete=$(find $logs_folder -name "*.log" -mtime +14) #vairable=$(comman
 
 
 while IFS= read -r $file; do
-  echo -e "deleteing files : $logs_folder"
+  echo  "deleteing files : $logs_folder"
   rm -f $file
-  echo -e "deleted files: $file"
+  echo  "deleted files: $file"
 done <<< $files_to_delete 
