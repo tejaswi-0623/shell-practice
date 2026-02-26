@@ -11,7 +11,7 @@ fi
 files_to_delete=$(find $logs_folder -name "*.log" -mtime + 14) 
 #name==file names *.log==log files to delete mtime==modified time +14=older than 14 days
 
-while IFS=read -r filepath; do #filepath is vairable here
+while IFS= read -r filepath; do #filepath is vairable here
   echo "the files need to be deleted or deleting files: $filepath"
   rm -f $filepath  #rm==remove f=force 
   echo "deleted files are: $filepath"
