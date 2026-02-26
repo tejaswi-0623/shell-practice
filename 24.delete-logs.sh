@@ -8,7 +8,7 @@ if [ ! -d $logs_folder ]; then  #to check directory or folder that exists to del
   exit 1
 fi
 
-files_to_delete=$(find find $logs_folder -name "*.log" -mtime +14) 
+files_to_delete=$(find $logs_folder -name "*.log" -mtime +14) 
 #name==file names *.log==log files to delete mtime==modified time +14=older than 14 days
 
 while IFS= read -r filepath; do #filepath is vairable here
@@ -19,3 +19,12 @@ done <<< $files_to_delete #<<<==appeending input vairable
 
 
 # here we are writing while loop to read the files line by line
+#creating directory named app-logs and files check notes
+
+# the files need to be deleted or deleting files: /home/ec2-user/app-logs/shipping.log
+# deleted files are: /home/ec2-user/app-logs/shipping.log
+# the files need to be deleted or deleting files: /home/ec2-user/app-logs/cart.log
+# deleted files are: /home/ec2-user/app-logs/cart.log
+# the files need to be deleted or deleting files: /home/ec2-user/app-logs/mysql.log
+# deleted files are: /home/ec2-user/app-logs/mysql.log
+
