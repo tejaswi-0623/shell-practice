@@ -3,7 +3,7 @@
 logs_folder="/home/ec2-user/app-logs" #in this path .log files are stored.
 logs_file="$logs_folder/$0.log"
 
-if [ ! -d $logs_folder ]; then
+if [ ! -d $logs_folder ]; then #checking the directory exists or not
   echo -e "$logs_folder does not exist"
   exit 1
 fi
@@ -24,3 +24,4 @@ done <<< $files_to_delete
 #now cd and go to cd app-logs and give list ls -l the log files older than 14 days will be deleted
 #like this we can write script to delete log files and delete them by scheduling crontabs
 #mkdir app-logs and create some files with older than 14 days and then execute this script
+#here without executing in command like sh 25.crontab.sh we will see the files are deleting using cronjobs
