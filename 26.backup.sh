@@ -13,12 +13,6 @@ days=${3:-14} #$3 for third argument and default we give as 14 days if user not 
 
 mkdir -p $logs_folder
 
-#checking root user or not
-if [ $userid -ne 0 ]; then
-  echo -e " $R please run the script with root user access $N"
-  exit 1
-fi 
-
 #log function for timestamp 
 log(){
     echo -e "$(date "+%Y-%m-%d %H:%M:%S") | $1" | tee -a $logs_file
@@ -27,6 +21,12 @@ log(){
 #$1=first argument to the function
 #$(date "+%Y-%m-%d %H:%M:%S") is command for timestamp
 #tee -a $logs_file appending output to log filr and print on the screen
+
+#checking root user or not
+if [ $userid -ne 0 ]; then
+  echo -e " $R please run the script with root user access $N"
+  exit 1
+fi 
 
 #usage function for how to run the script 
 usage(){
