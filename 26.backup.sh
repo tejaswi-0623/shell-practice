@@ -60,9 +60,47 @@ log "destination directory is : $destination_dir"
 log "rention days is :$days"
 
 #create app-logs and destination-dir through shell
-# sudo sh 26.backup.sh /home/ec2-user/app-logs /home/ec2-user/destination_dir
+# sudo sh 26.backup.sh /home/ec2-user/app-logs /home/ec2-user/destination_dir this command in shell we get below output
 # 2026-03-02 22:18:58 | backup started
 # 2026-03-02 22:18:58 | source directory is : /home/ec2-user/app-logs
 # 2026-03-02 22:18:58 | destination directory is : /home/ec2-user/destination_dir
 # 2026-03-02 22:18:58 | rention days is :14
 
+
+#archeive the files
+if [ -z $files ]; then #-z to check vairable is empty or not
+   log " No files to archeive.....$Y skipping $N"   #if empty execute this line
+else
+   # app-logs-$timestamp.zip
+   log "files found to archeive.....$files"  
+   timestamp=$(date +%F:%H:%M:%S) #%F →full date in YYYY-MM-DD, %H → hours, %M → minutes, %S → seconds
+   zip_file="$destination_dir/app-logs-$timestamp.tar.gz" #zipping the file with timestamp
+   log "Archieve name: $zip_file" 
+   tar -zcvf $zip_file $(find $source_dir -name "*.log" -type f -mtime +$days) #zcvf means create a gzip-compressed archive, verbose, specifying the filename
+ 
+
+ #check archeive is success or not
+   if [ -f $zip_file ]; then #-f=file exists or not
+        log "Archeival is ... $G SUCCESS $N"
+   #delete the file
+        while IFS= read -r filepath; do
+        # Process each line here
+        log "Deleting file: $filepath"
+        rm -f $filepath
+        log "Deleted file: $filepath"
+        done <<< $files
+    else
+        log "Archeival is ... $R FAILURE $N"
+        exit 1
+    fi
+fi
+
+#we are first creating source and destination directory through shell prompt ex:app-logs back-logs
+#now in script create folder and file for logs, source and destination directory and retention days
+#we are using log function with timestamp to show output in log files
+#checking root user or not 
+#check source and destination directories exist or not
+#we are backuping the files using usage function
+#we are finding the files using find command and storing the command in files vairable; as vairable=$(command)
+#archeive the file with timestamp and place in destination directory to archeive we are using tar zcvf command
+#checking whether archeive is success or not and then deleting the files
