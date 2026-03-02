@@ -55,6 +55,6 @@ fi
 files=$(find "$source_dir" -name "*.log" -type f -mtime +$days)
 
 log "backup started"
-log "source directory is : $1"
-log "destination directory is : $2"
+log "source directory is : $source_dir"
+log "destination directory is : $destination_dir"
 log "rention days is :$days"
