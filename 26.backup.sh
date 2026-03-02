@@ -68,7 +68,7 @@ log "rention days is :$days"
 
 
 #archeive the files
-if [ -z $files ]; then #-z to check vairable is empty or not
+if [ -z "${files}" ]; then #-z to check vairable is empty or not
    log " No files to archeive.....$Y skipping $N"   #if empty execute this line
 else
    # app-logs-$timestamp.zip
@@ -95,7 +95,7 @@ else
     fi
 fi
 
-#we are first creating source and destination directory through shell prompt ex:app-logs back-logs
+#we are first creating source and destination directory through shell prompt ex:app-logs destination-dir
 #now in script create folder and file for logs, source and destination directory and retention days
 #we are using log function with timestamp to show output in log files
 #checking root user or not 
@@ -104,3 +104,38 @@ fi
 #we are finding the files using find command and storing the command in files vairable; as vairable=$(command)
 #archeive the file with timestamp and place in destination directory to archeive we are using tar zcvf command
 #checking whether archeive is success or not and then deleting the files
+
+#create app-logs and destination-dir directories in terminal(mobaxterm) prompt 
+#in app-logs directory create some ".log" files ex:touch -d 20260215 nginx.log cart.log user.log data.log service.log
+# sudo sh 26.backup.sh /home/ec2-user/app-logs /home/ec2-user/destination_dir in mobaxterm prompt
+# 2026-03-02 22:48:39 | backup started
+# 2026-03-02 22:48:39 | source directory is : /home/ec2-user/app-logs
+# 2026-03-02 22:48:39 | destination directory is : /home/ec2-user/destination_dir
+# 2026-03-02 22:48:39 | rention days is :14
+# 26.backup.sh: line 71: [: too many arguments
+# 2026-03-02 22:48:39 | files found to archeive...../home/ec2-user/app-logs/nginx.log
+# /home/ec2-user/app-logs/cart.log
+# /home/ec2-user/app-logs/user.log
+# /home/ec2-user/app-logs/data.log
+# /home/ec2-user/app-logs/service.log
+# 2026-03-02 22:48:39 | Archieve name: /home/ec2-user/destination_dir/app-logs-2026-03-02:22:48:39.tar.gz
+# tar: Removing leading `/' from member names
+# /home/ec2-user/app-logs/nginx.log
+# tar: Removing leading `/' from hard link targets
+# /home/ec2-user/app-logs/cart.log
+# /home/ec2-user/app-logs/user.log
+# /home/ec2-user/app-logs/data.log
+# /home/ec2-user/app-logs/service.log
+# 2026-03-02 22:48:39 | Archeival is ...  SUCCESS
+# 2026-03-02 22:48:39 | Deleting file: /home/ec2-user/app-logs/nginx.log
+# 2026-03-02 22:48:39 | Deleted file: /home/ec2-user/app-logs/nginx.log
+# 2026-03-02 22:48:39 | Deleting file: /home/ec2-user/app-logs/cart.log
+# 2026-03-02 22:48:39 | Deleted file: /home/ec2-user/app-logs/cart.log
+# 2026-03-02 22:48:39 | Deleting file: /home/ec2-user/app-logs/user.log
+# 2026-03-02 22:48:39 | Deleted file: /home/ec2-user/app-logs/user.log
+# 2026-03-02 22:48:39 | Deleting file: /home/ec2-user/app-logs/data.log
+# 2026-03-02 22:48:39 | Deleted file: /home/ec2-user/app-logs/data.log
+# 2026-03-02 22:48:39 | Deleting file: /home/ec2-user/app-logs/service.log
+# 2026-03-02 22:48:39 | Deleted file: /home/ec2-user/app-logs/service.log
+
+
