@@ -3,10 +3,10 @@
 userid=$(id -u)
 logs_folder="/var/log/app-logs"
 logs_file="$logs_folder/backup.log"  #backup is filename
-red="\e[31m"
-green="\e[32m"
-yellow="\e[33m"
-normal="\e[0m"
+R="\e[31m"
+G="\e[32m"
+Y="\e[33m"
+N="\e[0m"
 source_dir=$1
 destination_dir=$2
 days=${3:-14} #$3 for third argument and default we give as 14 days if user not supplied retention days
