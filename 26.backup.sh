@@ -59,8 +59,8 @@ log "source directory is : $source_dir"
 log "destination directory is : $destination_dir"
 log "rention days is :$days"
 
-#create app-logs and destination-dir through shell
-# sudo sh 26.backup.sh /home/ec2-user/app-logs /home/ec2-user/destination_dir this command in shell we get below output
+#create app-logs and destination-dir through terminal prompt
+# sudo sh 26.backup.sh /home/ec2-user/app-logs /home/ec2-user/destination_dir this command terminal prompt
 # 2026-03-02 22:18:58 | backup started
 # 2026-03-02 22:18:58 | source directory is : /home/ec2-user/app-logs
 # 2026-03-02 22:18:58 | destination directory is : /home/ec2-user/destination_dir
