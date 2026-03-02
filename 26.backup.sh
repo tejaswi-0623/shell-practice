@@ -28,12 +28,23 @@ log(){
 #$(date "+%Y-%m-%d %H:%M:%S") is command for timestamp
 #tee -a $logs_file appending output to log filr and print on the screen
 
+#usage function for how to run the script 
 usage(){
-    log "$G usage sudo backup <source_dir> <destination_dir> <days>[Default 14 days] $N"
+    log "$G usage:: sudo backup <source_dir> <destination_dir> <days>[Default 14 days] $N"
     exit 1
 }
 
 #If the user did not provide at least two arguments, call usage function and exit the script
 if [ $# -lt 2 ]; then #$#---number of arguments
    usage
+fi
+
+if [ ! -d "$source_dir" ]; then
+  log "$R Source Directory : $1 does not exist $N"
+  exit 1
+fi
+
+if [ ! -d "$destination_dir" ]; then 
+  log "$R Destination directory : $2 does not exist $N"
+  exit 1
 fi
