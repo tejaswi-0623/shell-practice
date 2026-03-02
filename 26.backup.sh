@@ -112,7 +112,6 @@ fi
 # 2026-03-02 22:48:39 | source directory is : /home/ec2-user/app-logs
 # 2026-03-02 22:48:39 | destination directory is : /home/ec2-user/destination_dir
 # 2026-03-02 22:48:39 | rention days is :14
-# 26.backup.sh: line 71: [: too many arguments
 # 2026-03-02 22:48:39 | files found to archeive...../home/ec2-user/app-logs/nginx.log
 # /home/ec2-user/app-logs/cart.log
 # /home/ec2-user/app-logs/user.log
