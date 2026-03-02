@@ -39,12 +39,22 @@ if [ $# -lt 2 ]; then #$#---number of arguments
    usage
 fi
 
-if [ ! -d "$source_dir" ]; then
-  log "$R Source Directory : $1 does not exist $N"
+#to check source directory exists
+if [ ! -d "$source_dir" ]; then  #-d=directory
+  log "$R Source Directory : $1 does not exist $N" #$1=source_dir
   exit 1
 fi
 
+#to check destination directory exists
 if [ ! -d "$destination_dir" ]; then 
-  log "$R Destination directory : $2 does not exist $N"
+  log "$R Destination directory : $2 does not exist $N" #$2=destination_dir
   exit 1
 fi
+
+#find the files
+files=$(find "$1" -name "*.log" -type f -mtime +$days)
+
+log "backup started"
+log "source directory is : $1"
+log "destination directory is : $2"
+log "rention days is :$days"
