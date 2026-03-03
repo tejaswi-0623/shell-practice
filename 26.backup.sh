@@ -86,9 +86,9 @@ else
         while IFS= read -r filepath; do
         # Process each line here
         log "Deleting file: $filepath"
-        rm -f $filepath
+        rm -f $filepath #rm -f means remove file 
         log "Deleted file: $filepath"
-        done <<< $files
+        done <<< $files ##<<< means appending input vairable in while loop
     else
         log "Archeival is ... $R FAILURE $N"
         exit 1
