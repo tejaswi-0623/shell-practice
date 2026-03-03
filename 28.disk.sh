@@ -17,12 +17,13 @@ log "high disk usage alerted at"
 disk_usage=$(df -hT | grep -v Filesystem)
 usage_threshold=2 #in real-time we give 70 or 75 or 80
 
-while IFS= read -r line; do
+while IFS= read -r line 
+do
    use=$(echo $line | awk '{print $6}' | cut -d "%" -f1)
    mounted=$(echo $line | awk '{print $7}')
 
    if [ "$use" -ge "$disk_usage" ]; then
-    message+="high disk isage on $mounted:$use <br>"
+      message+="high disk isage on $mounted:$use <br>"
    fi
 done <<< $disk_usage
 
