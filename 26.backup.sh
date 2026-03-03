@@ -104,6 +104,9 @@ fi
 #we are finding the files using find command and storing the command in files vairable; as vairable=$(command)
 #archeive the file with timestamp and place in destination directory to archeive we are using tar zcvf command
 #checking whether archeive is success or not and then deleting the files
+#now we can automate this script through crontab also... crontab -e to edit crontab
+#to run every minute means * * * * * /home/ec2-user/app-logs /home/ec2-user/destination_dir and save the crontab file
+#to check sudo tail -f /var/log/cron
 
 #create app-logs and destination-dir directories in terminal(mobaxterm) prompt 
 #in app-logs directory create some ".log" files ex:touch -d 20260215 nginx.log cart.log user.log data.log service.log
