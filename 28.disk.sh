@@ -11,7 +11,6 @@ log(){
     echo -e "$(date "+%Y-%m-%d %H:%M:%S") | $1" | tee -a $logs_file
 }
 
-log "disk usage check script started"
 log "high disk usage alerted at"
 
 disk_usage=$(df -hT | grep -v Filesystem)
