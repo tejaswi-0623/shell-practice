@@ -14,11 +14,11 @@ log(){
 log "high disk usage alerted at"
 
 disk_usage=$(df -hT | grep -v Filesystem)
-usage_threshold=75 #in real-time we give 70 or 75 or 80
+usage_threshold=30 #in real-time we give 70 or 75 or 80
 
 while IFS= read -r line 
 do
-   use=$(echo $line | awk '{print $6}' | cut -d "%" -f1)
+   use=$(echo $line | awk '{print $6}' | cut -d "%" -f1) 
    mounted=$(echo $line | awk '{print $7}')
 
    if [ "$use" -ge "$usage_threshold" ]; then
