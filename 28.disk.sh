@@ -23,7 +23,8 @@ do
    mounted=$(echo $line | awk '{print $7}')
 
    if [ "$use" -ge "$usage_threshold" ]; then
-      message+="high disk isage on $mounted:$use <br>"
+      log "High disk usage on $mounted : $use%"
+      message+="high disk usage on $mounted:$use <br>"
    fi
 done <<< $disk_usage
 
