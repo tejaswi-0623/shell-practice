@@ -68,7 +68,7 @@ log "rention days is :$days"
 
 
 #archeive the files
-if [ -z "${files}" ]; then #-z to check vairable is empty or not
+if [ -z "${files}" ]; then #-z to check vairable is empty or not and files is vairable here
    log " No files to archeive.....$Y skipping $N"   #if empty execute this line
 else
    # app-logs-$timestamp.zip
