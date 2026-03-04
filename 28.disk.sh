@@ -19,12 +19,12 @@ usage_threshold=30 #in real-time we give 70 or 75 or 80
 while IFS= read -r line 
 do
    use=$(echo $line | awk '{print $6}' | cut -d "%" -f1) 
-   mounted=$(echo $line | awk '{print $7}')
+   mounted_device=$(echo $line | awk '{print $7}')
 
    if [ "$use" -ge "$usage_threshold" ]; then
-      message+="high disk usage on $mounted:$use <br>"
+      message+="high disk usage on $mounted_device:$use% \n"
    fi
 done <<< $disk_usage
 
-echo "$message"
+echo -e "$message"
 
