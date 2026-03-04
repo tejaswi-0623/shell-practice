@@ -2,7 +2,7 @@
 
 logs_folder="/var/log/alert"
 logs_file="$logs_folder/disk-alert.log"
-MESSAGE=""
+message=""
 IP_ADDRESS=$(curl http://169.254.169.254/latest/meta-data/local-ipv4)
 
 mkdir -p $logs_folder
@@ -27,7 +27,7 @@ done <<<$disk_usage
 
 echo -e "$message"
 
-sh 29.mail.sh "tejaswij993@gmail.com" "High Disk usage alert on $IP_ADDRESS" "$MESSAGE" "HIGH_disk_usage" "$IP_ADDRESS" "DevOps Team"
+sh 29.mail.sh "tejaswij993@gmail.com" "High Disk usage alert on $IP_ADDRESS" "$message" "HIGH_disk_usage" "$IP_ADDRESS" "DevOps Team"
 
 #this script is for disk utilization and send trigger mail
 #we are calling 29.mail.sh script here and giving inputs for $1,$2,$3,$4,$5and $6

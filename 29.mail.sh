@@ -16,7 +16,7 @@ echo "To: $TO_ADDRESS"
 echo "Subject: $SUBJECT"
 echo "Content-Type: text/html"
 echo ""
-echo "$EMAIL_BODY"
+echo "$FINAL_MESSAGE"
 } | msmtp "$TO_ADDRESS"
 
 #we will call this script in disk-alert.sh script 
