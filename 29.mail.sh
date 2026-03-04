@@ -20,4 +20,4 @@ echo "$EMAIL_BODY"
 } | msmtp "$TO_ADDRESS"
 
 #we will call this script in disk-alert.sh script 
-#we are giving sed -e for temporary 
+#we are giving sed -e for temporary for permanent means sed -i

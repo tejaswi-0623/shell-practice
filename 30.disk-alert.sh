@@ -28,3 +28,7 @@ done <<<$disk_usage
 echo -e "$message"
 
 sh 29.mail.sh "tejaswij993@gmail.com" "High Disk usage alert on $IP_ADDRESS" "$message" "HIGH_DISK_USAGE" "$IP_ADDRESS" "DevOps Team"
+
+#this script is for disk utilization and send trigger mail
+#we are calling 29.mail.sh script here and giving inputs for $1,$2,$3,$4,$5and $6
+#we are giving private address and that is command to get private ip address in AWS EC2 instance
