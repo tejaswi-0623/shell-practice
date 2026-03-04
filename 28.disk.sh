@@ -29,9 +29,10 @@ done <<< $disk_usage
 
 echo -e "$message"
 
+#script for disk utilization more than 30 for device/disk
 #sudo sh 28.disk.sh
 #2026-03-04 20:57:45 | high disk usage alerted at
 #high disk usage on /:38%
 #high disk usage on /boot:81%
-#if we didn't use cut -d % commmand it didnot compare with percentages so we are using this
+#if we didn't use cut -d % commmand it didnot compare with percentages so we are using this cut command here
 
