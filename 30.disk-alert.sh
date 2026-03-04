@@ -21,7 +21,7 @@ do
     device_use=$(echo $line |awk '{print $6}'|cut -d "%" -f1)
     mounted_device=$(echo $line |awk '{print $7}')
     if [ "$device_use" -ge "$usage_threshold" ]; then
-      message+="high disk usage alert on $mounted_device:$usage_threshold <br>"
+      message+="high disk usage alert on $mounted_device:$usage_threshold <br>" #<br> means new line in html
     fi
 done <<<$disk_usage
 
