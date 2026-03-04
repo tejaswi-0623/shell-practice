@@ -32,3 +32,16 @@ sh 29.mail.sh "tejaswij993@gmail.com" "High Disk usage alert on $IP_ADDRESS" "$m
 #this script is for disk utilization and send trigger mail
 #we are calling 29.mail.sh script here and giving inputs for $1,$2,$3,$4,$5and $6
 #we are giving private address and that is command to get private ip address in AWS EC2 instance
+
+#below is the output we got in mail
+# Hi DevOps Team,
+
+# There is an issue of DISK_UTILISATION typein the server. Please find the details below.
+
+# Server IP: 172.31.70.127
+# high disk usage alert on /:20
+# high disk usage alert on /var:20
+# high disk usage alert on /boot:20
+
+# Regards,
+# Monitoring Team
