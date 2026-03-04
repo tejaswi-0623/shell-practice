@@ -19,9 +19,9 @@ while IFS= read -r line #line is vairable here
 do
     device_use=$(echo $line |awk '{print $6}')
     mounted_device=$(echo $line |awk '{print $7}')
-     if [ "$device_use" -ge "$usage_threshold" ]; then
-       message+="high disk usage alert at $mounted_device:$usage_threshold"
-     fi
+    if [ "$device_use" -ge "$usage_threshold" ]; then
+      message+="high disk usage alert on $mounted_device:$usage_threshold \n"
+    fi
 done <<<$disk_usage
 
 echo -e "$message"
