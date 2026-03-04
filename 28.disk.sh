@@ -33,4 +33,5 @@ echo -e "$message"
 #2026-03-04 20:57:45 | high disk usage alerted at
 #high disk usage on /:38%
 #high disk usage on /boot:81%
+#if we didn't use cut -d % commmand it didnot compare with percentages so we are using this
 
