@@ -3,6 +3,7 @@
 logs_folder="/var/log/alert"
 logs_file="$logs_folder/disk-alert.log"
 message=""
+IP_ADDRESS=$(curl http://169.254.169.254/latest/meta-data/local-ipv4)
 
 mkdir -p $logs_folder
 
@@ -26,4 +27,4 @@ done <<<$disk_usage
 
 echo -e "$message"
 
-
+sh 29.mail.sh "tejaswij993@gmail.com" "High Disk usage alert on $IP_ADDRESS" "$message" "HIGH_DISK_USAGE" "$IP_ADDRESS" "DevOps Team"
