@@ -29,7 +29,7 @@ done <<< $disk_usage
 
 echo -e "$message"
 
-#script for disk utilization more than 30 for device/disk
+#script for disk utilization more than 30% for device/disk
 #sudo sh 28.disk.sh
 #2026-03-04 20:57:45 | high disk usage alerted at
 #high disk usage on /:38%
