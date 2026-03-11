@@ -1,4 +1,5 @@
 #!/bin/bash
+# script to delete logs
 
 logs_folder="/home/ec2-user/app-logs"
 logs_file="$logs_folder/$0.log"

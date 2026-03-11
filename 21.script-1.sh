@@ -1,4 +1,6 @@
 #!/bin/bash
+#calling another script from this script 
+
 
 country="INDIA"
 code="+91"

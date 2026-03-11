@@ -1,4 +1,6 @@
 #!/bin/bash
+#learning conditions 
+
 
 number=$1 #passing the value from command line
 

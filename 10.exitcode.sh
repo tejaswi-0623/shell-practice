@@ -1,4 +1,6 @@
 #!bin/bash
+#script to check root user and then install nginx
+
 
 userid=$(id -u)
 

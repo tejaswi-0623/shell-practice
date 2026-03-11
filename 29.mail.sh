@@ -23,15 +23,3 @@ echo "$FINAL_MESSAGE"
 #we are giving sed -e for temporary for permanent means sed -i
 
 
-#below is the output we got in mail
-# Hi DevOps Team,
-
-# There is an issue of DISK_UTILISATION type in the server. Please find the details below.
-
-# Server IP: 172.31.70.127
-# high disk usage alert on /:20
-# high disk usage alert on /var:20
-# high disk usage alert on /boot:20
-
-# Regards,
-# Monitoring Team

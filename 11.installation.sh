@@ -1,4 +1,6 @@
 #!/bin/bash
+#script to install nginx,mysql 
+
 
 userid=$(id -u)
 

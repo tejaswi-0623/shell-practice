@@ -1,4 +1,5 @@
 #!/bin/bash
+#learning data types 
 
 num1=100
 #num2=200.5

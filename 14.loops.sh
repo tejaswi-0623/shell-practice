@@ -1,4 +1,5 @@
 #!/bin/bash
+#script for installing packages using loops
 
 userid=$(id -u)
 logs_folder="var/log/shell-practice" #is folder path

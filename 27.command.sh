@@ -1,4 +1,5 @@
 #!/bin/bash
+#to run anything as command
 
 echo  "hi from command"
 echo  "giving script as command in linux"

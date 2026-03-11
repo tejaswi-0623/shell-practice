@@ -1,4 +1,5 @@
 #!/bin/bish
+#to learn colors in shell 
 
 red="\e[31m"
 green="\e[32m"

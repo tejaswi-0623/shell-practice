@@ -1,4 +1,6 @@
 #!/bin/bash
+#to learn while loop
+
 
 count=1
 

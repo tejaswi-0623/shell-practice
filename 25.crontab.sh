@@ -1,4 +1,5 @@
 #!/bin/bash
+#script to delte logs using crontabs
 
 logs_folder="/home/ec2-user/app-logs" #in this path .log files are stored.
 logs_file="$logs_folder/$0.log"

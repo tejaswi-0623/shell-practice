@@ -1,4 +1,7 @@
 #!/bin/bash
+#to learn set command 
+
+
 set -e # this will be checking for errors, if errors it will exit
 
 userid=$(id -u)

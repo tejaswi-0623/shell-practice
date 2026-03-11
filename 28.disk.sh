@@ -1,4 +1,5 @@
 #!/bin/bash
+#script to check disk utilization and print if exceeds threshold
 
 logs_folder="/var/log/disk-alert"
 logs_file="$logs_folder/disk.log"

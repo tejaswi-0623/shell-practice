@@ -1,4 +1,6 @@
 #!/bin/bash
+#script to check disk utilization and trigger email if disk exceeds threshold value
+
 
 logs_folder="/var/log/alert"
 logs_file="$logs_folder/disk-alert.log"

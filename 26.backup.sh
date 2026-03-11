@@ -1,4 +1,6 @@
 #!/bin/bash
+#script to delete logs firstly taking backup into folder and then delete
+
 
 userid=$(id -u)
 logs_folder="/var/log/app-logs"

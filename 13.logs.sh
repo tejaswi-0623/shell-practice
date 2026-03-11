@@ -1,4 +1,6 @@
 #!/bin/bash
+#script to logs 
+
 
 userid=$(id -u)  #userid is vairable 
 Logs_folder="var/log/shell-practice"  

@@ -1,4 +1,5 @@
 #!/bin/bash
+#to learn trao command
 
 set -e #ERR--->error
 

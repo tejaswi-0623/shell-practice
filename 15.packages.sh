@@ -1,4 +1,5 @@
 #!bin/bash
+#script to install packages, if installed skip otherwise install
 
 userid=$(id -u)
 logs_folder="var/log/shell-practice"

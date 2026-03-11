@@ -1,4 +1,6 @@
 #!/bin/bash
+#script to learn functions and installing nginx,mysql,redis using functions
+
 
 userid=$(id -u)
 

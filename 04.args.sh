@@ -1,4 +1,5 @@
 #!/bin/bash
+#giving vairables as arguments script
 
 person1=$1
 person2=$2

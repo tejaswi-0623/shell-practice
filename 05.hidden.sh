@@ -1,4 +1,5 @@
 #!/bin/bash
+#to hide the password from reading in prompt script
 
 echo "please enter user name"
 read user_name

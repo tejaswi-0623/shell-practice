@@ -1,4 +1,6 @@
 #!/bin/bash
+#learnig vairables 
+
 
 person1="honey"
 person2="mani"
